@@ -1,3 +1,12 @@
+import { Header } from "../../components/Header";
+
 export function DeletedTodoPages() {
-  return <div>Deleted todo page</div>
+  return (
+    <>
+      <Header />
+      <main>
+        <h1>Deleted todos</h1>
+      </main>
+    </>
+  );
 }
