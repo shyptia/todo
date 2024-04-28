@@ -6,8 +6,9 @@ import { v4 as uuidv4 } from "uuid";
 import { TextInput } from "../../components/TextInput";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
-import './styles.scss';
+import "./styles.scss";
 import { Todo } from "../../components/Todo";
+import { EmptyState } from "../../components/EmptyState";
 
 export function TodoPage() {
   const todos = useSelector(selectAllTodos);
@@ -42,9 +43,11 @@ export function TodoPage() {
           <Button onClick={handleAddTodo}>Add todo</Button>
         </div>
 
-        {todos.map((todo) => (
-          <Todo key={todo.id} todo={todo} />
-        ))}
+        {todos.length === 0 ? (
+          <EmptyState />
+        ) : (
+          todos.map((todo) => <Todo key={todo.id} todo={todo} />)
+        )}
       </main>
     </>
   );
