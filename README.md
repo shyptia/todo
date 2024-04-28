@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# Todo app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Demo 
 
-## Available Scripts
+- [DEMO LINK](https://shyptia.github.io/todo/)
 
-In the project directory, you can run:
+https://github.com/shyptia/todo/assets/57047930/430f23a0-4e05-4754-9b55-3d49e20d6113
 
-### `yarn start`
+### Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This is an application for managing your current tasks. The app features two tabs to track all todos and deleted todos. On the "All Todos" tab, you can add a new todo. Each todo allows you to change its status - completed or not completed, and you can also edit the todo's title by clicking on the pencil icon. Additionally, clicking on the delete icon removes the todo from the list of all todos and adds it to the list of deleted todos. On the "Deleted Todos" tab, you have the option to restore a todo.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Technologies used:
 
-### `yarn test`
+- React
+- Redux
+- React Router
+- TypeScript
+- SCSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Instructions how to run application locally:
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Open terminal in the project.
+4. Set up project and install necessary packages:
+```bash 
+yarn
+```
+4. Run the development server:
+```bash 
+yarn start
+```
+5. Open application in your browser `http://localhost:3000/`
