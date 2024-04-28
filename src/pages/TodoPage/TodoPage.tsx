@@ -7,6 +7,7 @@ import { TextInput } from "../../components/TextInput";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import './styles.scss';
+import { Todo } from "../../components/Todo";
 
 export function TodoPage() {
   const todos = useSelector(selectAllTodos);
@@ -29,7 +30,7 @@ export function TodoPage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="container">
         <h1>All Todos</h1>
 
         <div className="input-container">
@@ -41,11 +42,9 @@ export function TodoPage() {
           <Button onClick={handleAddTodo}>Add todo</Button>
         </div>
 
-        <ul>
-          {todos.map((todo) => (
-            <li key={todo.id}>{todo.title}</li>
-          ))}
-        </ul>
+        {todos.map((todo) => (
+          <Todo key={todo.id} todo={todo} />
+        ))}
       </main>
     </>
   );

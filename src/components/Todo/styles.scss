@@ -1,0 +1,26 @@
+.todo {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 10px 15px;
+
+  &_completed {
+    text-decoration: line-through;
+    background-color: #d8ffde;
+  }
+
+  &__title {
+    width: 100%;
+    text-align: start;
+    margin-left: 8px;
+  }
+
+  &__delete-icon {
+    width: 20;
+    height: 20;
+  }
+}
