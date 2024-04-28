@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./styles.scss";
 import clsx from "clsx";
+import { links } from "./links";
 
 export function Header() {
   const location = useLocation();
@@ -10,26 +11,19 @@ export function Header() {
     <header className="header">
       <nav className="nav">
         <ul className="nav__list">
-          <li
-            className={clsx(
-              "nav__item",
-              location.pathname === "/" && "nav__item_active"
-            )}
-          >
-            <Link to="/" className="nav__link">
-              All
-            </Link>
-          </li>
-          <li
-            className={clsx(
-              "nav__item",
-              location.pathname === "/deleted" && "nav__item_active"
-            )}
-          >
-            <Link to="/deleted" className="nav__link">
-              Deleted
-            </Link>
-          </li>
+          {links.map((link) => (
+            <li className="nav__item">
+              <Link
+                to={link.pathname}
+                className={clsx(
+                  "nav__link",
+                  location.pathname === link.pathname && "nav__link_active"
+                )}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
