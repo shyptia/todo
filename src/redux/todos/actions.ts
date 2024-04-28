@@ -1,16 +1,21 @@
-import { Todo } from "./types";
+import { ActionType, Todo } from "./types";
 
 export const addTodo = (todo: Todo) => ({
-  type: 'ADD_TODO',
+  type: ActionType.addTodo,
   payload: todo,
 });
 
 export const deleteTodo = (todo: Todo) => ({
-  type: 'DELETE_TODO',
+  type: ActionType.deleteTodo,
   payload: todo,
 });
 
 export const updateTodo = (todo: Partial<Todo>) => ({
-  type: 'UPDATE_TODO',
+  type: ActionType.updateTodo,
+  payload: todo,
+});
+
+export const restoreTodo = (todo: Todo) => ({
+  type: ActionType.restoreTodo,
   payload: todo,
 });

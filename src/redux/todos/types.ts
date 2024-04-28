@@ -13,9 +13,11 @@ export enum ActionType {
   addTodo = "ADD_TODO",
   deleteTodo = "DELETE_TODO",
   updateTodo = "UPDATE_TODO",
+  restoreTodo = 'RESTORE_TODO',
 }
 
 export type Action =
   | { type: ActionType.addTodo, payload: Todo }
   | { type: ActionType.deleteTodo, payload: Todo }
-  | { type: ActionType.updateTodo, payload: Partial<Todo> };
+  | { type: ActionType.updateTodo, payload: Partial<Todo> }
+  | { type: ActionType.restoreTodo, payload: Todo };

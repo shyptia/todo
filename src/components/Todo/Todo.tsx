@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Todo as TodoType } from "../../redux/todos/types";
 import { useDispatch } from "react-redux";
-import { deleteTodo, updateTodo } from "../../redux/todos/actions";
+import { deleteTodo, restoreTodo, updateTodo } from "../../redux/todos/actions";
 import deleteIcon from "../../assets/svg/delete-icon.svg";
 import editIcon from "../../assets/svg/edit-icon.svg";
 import "./styles.scss";
@@ -35,6 +35,10 @@ export function Todo({
 
     dispatch(updateTodo({ ...todo, title: editedTitle }));
     setIsEditing(false);
+  };
+
+  const handleRestoreTodo = () => {
+    dispatch(restoreTodo(todo));
   };
 
   return (
@@ -81,6 +85,8 @@ export function Todo({
           />
         </>
       )}
+
+      {deleted && <Button onClick={handleRestoreTodo}>Restore todo</Button>}
     </div>
   );
 }
